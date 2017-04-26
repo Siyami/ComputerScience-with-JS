@@ -70,3 +70,24 @@ myLL.addToTail('world');
 myLL.addToTail(20);
 
 console.log(myLL.search(10));
+
+LinkedList.prototype.indexOf = function(searchValue) {
+  let currentNode = this.head;
+  let result = [];
+  let index = 0;
+  while(currentNode) {
+    if(currentNode.value === searchValue) {
+      result.push(index);
+    }
+    index++;
+    currentNode = currentNode.next;
+  }
+  return result;
+}
+
+let myLL = new LinkedList();
+myLL.addToTail(1)
+myLL.addToTail(1)
+myLL.addToTail(2)
+
+console.log(myLL.indexOf(2))
