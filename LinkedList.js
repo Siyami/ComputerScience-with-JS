@@ -1,8 +1,10 @@
+// Constructor Function
 function LinkedList() {
   this.head = null;
   this.tail = null;
 }
 
+// Constructor Function
 function Node(value, next, prev) {
   this.value = value;
   this.next = next;
