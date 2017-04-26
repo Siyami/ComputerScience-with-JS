@@ -48,3 +48,25 @@ LinkedList.prototype.removeHead = function() {
   else this.tail = null;
   return val;
 }
+
+LinkedList.prototype.search = function(searchValue) {
+  let currentNode = this.head;
+  while(currentNode) {
+    if(currentNode.value === searchValue) {
+      return currentNode.value;
+    }
+    currentNode = currentNode.next;
+  }
+  return null;
+}
+
+let myLL = new LinkedList();
+
+myLL.addToHead(123);
+myLL.addToHead(70);
+myLL.addToHead('hello');
+myLL.addToTail(19);
+myLL.addToTail('world');
+myLL.addToTail(20);
+
+console.log(myLL.search(10));
